@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Olympus Bar – fancy yet cozy resto-bar in Kiriri, Bujumbura offering mythical evenings with craft cocktails and skyline views.">
+  <title>Olympus Bar | Kiriri Heights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Background audio player with cancel button -->
+  <div class="audio-controls" aria-label="Background music controls">
+    <audio id="backgroundAudio" loop>
+      <source src="assets/media/audios/5_Minute_Countdown_Timer__-_Cozy_Coffee_Shop_With_Fireplace___Music__Jazz_(256k).mp3" type="audio/mpeg">
+    </audio>
+    <button type="button" id="audioToggle" class="audio-toggle" aria-label="Toggle background music" aria-pressed="false">
+      <span class="audio-icon audio-icon--play" aria-hidden="true">♪</span>
+      <span class="audio-icon audio-icon--pause" aria-hidden="true">‖</span>
+    </button>
+  </div>
+
+  <a class="skip-link" href="#main" data-i18n="skip">Passer au contenu</a>
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader__orb" role="presentation"></div>
+    <p data-i18n="preloader">Préparation de l'expérience du Mont...</p>
+  </div>
+  <header class="site-header" id="home" role="banner">
+    <nav class="site-nav" aria-label="Primary">
+      <div class="logo-wrapper">
+        <img src="assets/images/olympus-logo.png" alt="Olympus Bar logo" class="logo-img">
+        <span class="logo-text">Olympus Bar</span>
+      </div>
+      <div class="nav-controls">
+        <button type="button" id="langToggle" class="btn btn-outline btn-sm" aria-label="Toggle language" aria-pressed="false">
+          <span data-i18n="lang-en">EN</span>
+          <span data-i18n="lang-fr" style="display:none">FR</span>
+        </button>
+        <button type="button" id="themeToggleNav" class="btn btn-outline btn-sm" aria-label="Toggle theme" aria-pressed="false">
+          <span data-i18n="theme-dark">☾</span>
+          <span data-i18n="theme-light" style="display:none">☀</span>
+        </button>
+      </div>
+      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="#home" data-i18n="nav-home">Accueil</a></li>
+        <li><a href="#about" data-i18n="nav-about">À propos</a></li>
+        <li><a href="#menu" data-i18n="nav-menu">Menu</a></li>
+        <li><a href="#gallery" data-i18n="nav-gallery">Galerie</a></li>
+        <li><a href="#booking" data-i18n="nav-booking">Réserver</a></li>
+        <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+      <a class="cta-button" href="#booking" data-i18n="cta-book">Réserver maintenant</a>
+    </nav>
+    <progress class="evening-progress" max="100" value="18">Evening ambience 18%</progress>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true"></div>
+      <span class="laurel laurel--left" aria-hidden="true"></span>
+      <span class="laurel laurel--right" aria-hidden="true"></span>
+      <div class="hero__content">
+        <p class="eyebrow">Kiriri Heights · Bujumbura</p>
+        <h1 id="hero-title" data-i18n="hero-title">Montez vers l'Olympe</h1>
+        <p class="hero__subtitle" data-i18n="hero-subtitle">Cocktails sophistiqués et bouchées conviviales avec vue sur les lumières de la ville.</p>
+        <div class="hero__actions">
+          <a class="btn btn-outline" href="#menu" data-i18n="btn-explore">Découvrir le menu</a>
+          <a class="btn btn-amber" href="#booking" data-i18n="btn-book">Réserver une table</a>
+        </div>
+        <div class="hero__details">
+          <div>
+            <strong>Hours</strong>
+            <p>Wed – Sun · 5pm – 2am</p>
+          </div>
+          <div>
+            <strong>Dress Code</strong>
+            <p>Smart casual</p>
+          </div>
+          <div>
+            <strong>Contact</strong>
+            <p><a href="mailto:hola@olympusbar.com">hola@olympusbar.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="hero__arrow" aria-hidden="true"></div>
+    </section>
+
+    <section id="about" class="section about" aria-labelledby="about-title" data-animate>
+      <div class="section__intro">
+        <p class="eyebrow" data-i18n="about-eyebrow">Mythical Sanctuary</p>
+        <h2 id="about-title" data-i18n="about-title">A Haven Above the City</h2>
+        <p class="section__lede" data-i18n="about-lede">Perched on Kiriri’s crest, Olympus Bar marries <span class="text-italic">mythos</span> and modern comfort—glowing cocktails, velvet banquettes, and skyline vistas framed by laurel wreaths.</p>
+      </div>
+      <div class="about__grid">
+        <div class="about__carousel" role="region" aria-label="Cozy lounge carousel">
+          <div class="carousel-track">
+            <figure>
+              <img src="assets/images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg" alt="Dimly lit lounge seating with amber glow">
+              <figcaption>Cozy lounge alcoves</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/joshua-rodriguez-f7zm5TDOi4g-unsplash.jpg" alt="Panoramic skyline at dusk over Bujumbura">
+              <figcaption>Kiriri skyline views</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/images/lee-campbell-31QfYo1h32o-unsplash.jpg" alt="Guests enjoying cocktails at an elegant bar">
+              <figcaption>Evenings with friends</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="about__content">
+          <p data-i18n="about-paragraph">We spotlight Burundian botanicals, barrel-smoked bitters, and small plates inspired by the region’s gardens. Expect attentive hosts, a curated vinyl soundtrack, and breezes that smell like pine and citrus.</p>
+          <ul class="list--mythic" data-i18n="about-list">
+            <li>Curated cocktail atlas shaking up heritage ingredients.</li>
+            <li>Sunset bites—from sambaza tostadas to spiced plantain cigars.</li>
+            <li>Golden hour rituals with storytelling hosts.</li>
+          </ul>
+          <div class="story-card">
+            <h3 data-i18n="chef-title">Chef’s Promise</h3>
+            <p data-i18n="chef-desc">Every plate leaves the pass with a <span class="text-bold">gilded flourish</span> and rests inside a rounded porcelain frame to keep warmth swirling.</p>
+          </div>
+          <a class="text-link" href="#menu" data-i18n="about-learnmore">Learn More · glide to menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu" aria-labelledby="menu-title" data-animate>
+      <div class="section__intro">
+        <p class="eyebrow">Crafted Indulgences</p>
+        <h2 id="menu-title">Menu Highlights</h2>
+        <p class="section__lede">Sip through celestial cocktails, graze on fusion bites, and discover limited-run specials. Use the search bar to find your flavor.</p>
+      </div>
+      <div class="menu__actions">
+        <label for="menu-search">Search the spread</label>
+        <input type="search" id="menu-search" name="menu-search" placeholder="Try “citrus”, “gin”, or “plantain”" aria-describedby="menu-search-help">
+        <button type="button" id="menu-search-clear" class="btn btn-outline">Clear</button>
+        <p id="menu-search-help">Filters the visible cards instantly.</p>
+      </div>
+      <div class="menu__tabs" role="tablist" aria-label="Menu categories">
+        <button type="button" role="tab" aria-selected="true" data-tab="cocktails">Cocktails</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="bites">Bites</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="specials">Specials</button>
+      </div>
+      <div class="menu__panels">
+        <div class="menu__panel is-active" role="tabpanel" data-panel="cocktails">
+          <article class="menu-card" data-name="Elysian Elixir" data-tags="cocktail gin citrus floral">
+            <img src="assets/images/alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="Crystal coupe with amber cocktail and orange peel">
+            <div class="menu-card__body">
+              <h3>Elysian Elixir <span class="price">$12</span></h3>
+              <p data-i18n="menu-elysian-desc">Gin, sorghum honey, saffron mist, citrus smoke.</p>
+              <p class="menu-card__note" data-i18n="menu-elysian-notes"><span class="text-bold">Notes:</span> meadow herbs, silk finish.</p>
+            </div>
+          </article>
+          <article class="menu-card" data-name="Ambrosia Negroni" data-tags="cocktail negroni bitter">
+            <img src="assets/images/joshua-rodriguez-f7zm5TDOi4g-unsplash.jpg" alt="Negroni with orange peel and dramatic lighting">
+            <div class="menu-card__body">
+              <h3>Ambrosia Negroni <span class="price">$14</span></h3>
+              <p data-i18n="menu-ambrosia-desc">Barrel-rested gin, hibiscus vermouth, cacao bitters.</p>
+              <p class="menu-card__note" data-i18n="menu-ambrosia-notes"><span class="text-bold">Notes:</span> ruby glow, velvety bitters.</p>
+            </div>
+          </article>
+          <article class="menu-card" data-name="Zephyr Highball" data-tags="cocktail highball sparkling">
+            <img src="assets/images/blake-wisz-DjvT6_UDDBA-unsplash.jpg" alt="Highball glass with sparkling cocktail and citrus">
+            <div class="menu-card__body">
+              <h3>Zephyr Highball <span class="price">$11</span></h3>
+              <p data-i18n="menu-zephyr-desc">Smoky whisky, tamarind soda, kaffir lime vapor.</p>
+              <p class="menu-card__note" data-i18n="menu-zephyr-notes"><span class="text-bold">Notes:</span> effervescent, spice-kissed.</p>
+            </div>
+          </article>
+        </div>
+        <div class="menu__panel" role="tabpanel" data-panel="bites">
+            <article class="menu-card" data-name="Nile Pearl Bao" data-tags="bite bao sambaza">
+              <img src="assets/images/caroline-attwood-cdVqG9vnCVw-unsplash.jpg" alt="Gourmet bao bun with herbs">
+              <div class="menu-card__body">
+                <h3>Nile Pearl Bao <span class="price">$10</span></h3>
+                <p data-i18n="menu-nile-desc">Sesame bao, sambaza tempura, pickled hibiscus.</p>
+                <p class="menu-card__note" data-i18n="menu-nile-note"><span class="text-bold">Texture:</span> crisp + pillowy.</p>
+            </div>
+          </article>
+          <article class="menu-card" data-name="Kiriri Ember Board" data-tags="bite board charcuterie">
+              <img src="assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Charcuterie board with cheeses and fruit">
+              <div class="menu-card__body">
+                <h3>Kiriri Ember Board <span class="price">$18</span></h3>
+                <p data-i18n="menu-ember-desc">Smoked goat cheese, plantain crisps, spiced nuts.</p>
+                <p class="menu-card__note" data-i18n="menu-ember-note"><span class="text-bold">Pairing:</span> Zephyr Highball.</p>
+            </div>
+          </article>
+          <article class="menu-card" data-name="Cloud Bank Tartlet" data-tags="bite dessert tart">
+              <img src="assets/images/trinh-minh-th-a6kYPun9_ao-unsplash.jpg" alt="Dessert tart with berries and gold leaf">
+              <div class="menu-card__body">
+                <h3>Cloud Bank Tartlet <span class="price">$9</span></h3>
+                <p data-i18n="menu-tartlet-desc">Maracuja curd, vanilla chantilly, cacao nib dust.</p>
+                <p class="menu-card__note" data-i18n="menu-tartlet-note"><span class="text-bold">Finish:</span> satin-smooth.</p>
+            </div>
+          </article>
+        </div>
+        <div class="menu__panel" role="tabpanel" data-panel="specials">
+          <article class="menu-card" data-name="Olympus Tasting" data-tags="special tasting menu">
+            <img src="assets/images/joshua-rodriguez-f7zm5TDOi4g-unsplash.jpg" alt="Tasting flight with skyline in background">
+            <div class="menu-card__body">
+              <h3>Olympus Tasting <span class="price">$35</span></h3>
+              <p data-i18n="menu-olympus-desc">Three-course sip & bite pairing featuring limited infusions.</p>
+              <p class="menu-card__note" data-i18n="menu-olympus-note"><span class="text-bold">Limited:</span> 12 seats nightly.</p>
+            </div>
+          </article>
+          <article class="menu-card" data-name="Celestial Mocktail Set" data-tags="special zero-proof">
+            <img src="assets/images/quan-le-GKnCGtuR4xs-unsplash.jpg" alt="Colorful mocktails with mountain view">
+            <div class="menu-card__body">
+              <h3>Celestial Mocktail Set <span class="price">$16</span></h3>
+              <p data-i18n="menu-mocktail-desc">Zero-proof trio with baobab nectar, cardamom tonic, sage mist.</p>
+              <p class="menu-card__note" data-i18n="menu-mocktail-note"><span class="text-bold">Mood:</span> uplifting & calm.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="menu__extras">
+        <div class="menu__tasting">
+          <h4 data-i18n="tasting-title">Three-Sip Odyssey</h4>
+          <ol>
+            <li data-i18n="tasting-step-1">Begin with a chilled amuse-bouche shot of ginger kono.</li>
+            <li data-i18n="tasting-step-2">Glide into the Ambrosia Negroni served tableside with incense.</li>
+            <li data-i18n="tasting-step-3">Conclude with a smoky espresso martini crowned in cacao.</li>
+          </ol>
+        </div>
+        <div class="menu__download">
+          <p data-i18n="download-text"><strong class="text-bold">Full spread:</strong> Download the season’s PDF to plan your table.</p>
+          <a class="btn btn-amber" href="assets/docs/olympus-menu.pdf" download data-i18n="download-cta">View Full Menu (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery" aria-labelledby="gallery-title" data-animate>
+      <div class="section__intro">
+        <p class="eyebrow">Cinematic Moments</p>
+        <h2 id="gallery-title">Moments from the Mountaintop</h2>
+        <p class="section__lede">Tap any frame to open the lightbox and relive our amber-lit evenings.</p>
+      </div>
+      <div class="gallery__grid">
+        <button class="gallery__item" data-full="assets/images/jason-leung-poI7DelFiVA-unsplash.jpg" data-caption="Candlelit bar counter with city lights.">
+          <img src="assets/images/jason-leung-poI7DelFiVA-unsplash.jpg" alt="Candlelit bar counter with city lights">
+        </button>
+        <button class="gallery__item" data-full="assets/images/alex-haney-CAhjZmVk5H4-unsplash.jpg" data-caption="Warm cocktail closeup.">
+          <img src="assets/images/alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="Closeup of glowing cocktail">
+        </button>
+        <button class="gallery__item" data-full="assets/images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg" data-caption="Plush booths ready for sunset.">
+          <img src="assets/images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg" alt="Plush booth seating">
+        </button>
+        <button class="gallery__item" data-full="assets/images/lee-campbell-31QfYo1h32o-unsplash.jpg" data-caption="Guests savoring bites.">
+          <img src="assets/images/lee-campbell-31QfYo1h32o-unsplash.jpg" alt="Guests savoring bites">
+        </button>
+        <button class="gallery__item" data-full="assets/images/siyuan-g_V2rt6iG7A-unsplash.jpg" data-caption="Charcuterie boards under golden light.">
+          <img src="assets/images/siyuan-g_V2rt6iG7A-unsplash.jpg" alt="Charcuterie board under golden light">
+        </button>
+        <button class="gallery__item" data-full="assets/images/choi-sungwoo-XiyR0BXRIsI-unsplash.jpg" data-caption="Dessert artistry.">
+          <img src="assets/images/choi-sungwoo-XiyR0BXRIsI-unsplash.jpg" alt="Dessert artistry detail">
+        </button>
+        <button class="gallery__item" data-full="assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" data-caption="Chef plating immersive bites.">
+          <img src="assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Chef plating bites">
+        </button>
+        <button class="gallery__item" data-full="assets/images/quan-le-GKnCGtuR4xs-unsplash.jpg" data-caption="Sweep of Kiriri mountain ridge.">
+          <img src="assets/images/quan-le-GKnCGtuR4xs-unsplash.jpg" alt="Kiriri mountain ridge view">
+        </button>
+        <button class="gallery__item" data-full="assets/images/george-bakos-83HwuZirc-c-unsplash.jpg" data-caption="City lights beyond the terrace.">
+          <img src="assets/images/george-bakos-83HwuZirc-c-unsplash.jpg" alt="City lights beyond terrace">
+        </button>
+      </div>
+    </section>
+
+    <section id="booking" class="section booking" aria-labelledby="booking-title" data-animate>
+      <div class="booking__wrapper">
+        <div class="booking__copy">
+          <p class="eyebrow" data-i18n="booking-eyebrow">Reserve Your Throne</p>
+          <h2 id="booking-title" data-i18n="booking-title">Book a Table</h2>
+          <p data-i18n="booking-desc">Peak hours fill quickly; smart casual attire keeps the glow refined. Tap “Send Inquiry” then message us on <a href="https://wa.me/25700000000" target="_blank" rel="noopener noreferrer">WhatsApp</a> or email to confirm.</p>
+        </div>
+        <form class="booking-form" aria-describedby="booking-note">
+          <div class="form-row">
+            <label for="booking-date">Date</label>
+            <input id="booking-date" type="date" value="2025-11-15" readonly>
+          </div>
+          <div class="form-row">
+            <label for="booking-time">Time</label>
+            <input id="booking-time" type="time" value="20:00" readonly>
+          </div>
+          <div class="form-row">
+            <label for="booking-guests">Guests</label>
+            <input id="booking-guests" type="number" value="4" readonly>
+          </div>
+          <div class="form-row">
+            <label for="booking-name">Name</label>
+            <input id="booking-name" type="text" placeholder="Adah Nyabenda" readonly>
+          </div>
+          <div class="form-row">
+            <label for="booking-email">Email</label>
+            <input id="booking-email" type="email" placeholder="hola@olympusbar.com" readonly>
+          </div>
+          <div class="form-row">
+            <label for="booking-notes">Notes</label>
+            <textarea id="booking-notes" rows="3" placeholder="Window booth, skyline view" readonly></textarea>
+          </div>
+          <button type="button" id="bookingSubmit" class="btn btn-amber">Send Inquiry</button>
+          <button type="button" id="bookingSubmit" class="btn btn-amber" data-i18n="booking-submit">Send Inquiry</button>
+          <p id="booking-note" class="booking__note" data-i18n="booking-note">Contact us via WhatsApp or email to confirm.</p>
+          <p class="booking__success" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title" data-animate>
+      <div class="section__intro">
+        <p class="eyebrow">Stay in Touch</p>
+        <h2 id="contact-title">Contact & Experience</h2>
+        <p class="section__lede">Slide through maps, schedules, audio-visual teasers, and social corners before you visit.</p>
+      </div>
+      <div class="contact__grid">
+        <article class="contact__card contact__map">
+          <h3>Kiriri Heights Map</h3>
+          <img src="assets/images/george-bakos-83HwuZirc-c-unsplash.jpg" alt="Stylized aerial view representing Kiriri Heights">
+          <p>Kiriri Heights, Bujumbura, Burundi</p>
+        </article>
+        <article class="contact__card contact__details">
+          <h3>Details & Hours</h3>
+          <h4>Call or Message</h4>
+          <p><a href="tel:+25700000000">+257 00 000 000</a> · <a href="mailto:hola@olympusbar.com">hola@olympusbar.com</a></p>
+          <h5>Atmosphere Meter</h5>
+          <p>Expect mellow jazz early, upbeat soul by midnight.</p>
+          <h6>Last Call Reminder</h6>
+          <p>Nightly at 1:30 am sharp.</p>
+          <table class="schedule-table">
+            <caption>Weekly Live Sets</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Theme</th>
+                <th scope="col">Lead Artist</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" rowspan="2">Wednesday</th>
+                <td colspan="2">Vinyl & Velvet Sessions</td>
+              </tr>
+              <tr>
+                <td>8:00 pm</td>
+                <td>DJ Mara</td>
+              </tr>
+              <tr>
+                <th scope="row">Thursday</th>
+                <td>Neo-soul live trio</td>
+                <td>Ivuka Ensemble</td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="2">Friday</th>
+                <td colspan="2">Skyline Sunset Jam</td>
+              </tr>
+              <tr>
+                <td>10:00 pm</td>
+                <td>Kaïla & Co.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
+        </article>
+        <article class="contact__card contact__media">
+          <h3>Audio · Visual Teasers</h3>
+          <video controls poster="assets/images/jason-leung-poI7DelFiVA-unsplash.jpg">
+            <source src="assets/media/videos/Restaurant_Promo_Video___Historia_Meze_Grill___High_Wycombe(1080p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <audio controls>
+            <source src="assets/media/audios/5_Minute_Countdown_Timer__-_Cozy_Coffee_Shop_With_Fireplace___Music__Jazz_(256k).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </article>
+      </div>
+      <div class="instagram-feed">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="Cocktail highlight on Instagram">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/lee-campbell-31QfYo1h32o-unsplash.jpg" alt="Guest cheers moment on Instagram">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg" alt="Velvet booth highlight on Instagram">
+        </a>
+      </div>
+    </section>
+
+    <section id="survey" class="section survey" aria-labelledby="survey-title" data-animate>
+      <div class="section__intro">
+        <p class="eyebrow">Guest Pulse</p>
+        <h2 id="survey-title">Nightfall Preference Survey</h2>
+        <p class="section__lede">Complete the form so we can tailor the ambience. Inputs showcase HTML capabilities requested in class.</p>
+      </div>
+      <form id="survey-form">
+        <fieldset>
+          <legend>Guest Essentials</legend>
+          <label for="guest-name">Full Name</label>
+          <input id="guest-name" type="text" name="guest-name" placeholder="Lyse Uwimana" required>
+
+          <label for="guest-email">Email</label>
+          <input id="guest-email" type="email" name="guest-email" placeholder="lyse@example.com" required>
+
+          <label for="guest-phone">Phone</label>
+          <input id="guest-phone" type="tel" name="guest-phone" placeholder="+257 79 000 000" pattern="\+?[0-9\s]{8,}">
+
+          <label for="guest-search">Search a flavor</label>
+          <input id="guest-search" type="search" name="guest-search" list="flavor-bank" placeholder="cocoa, ginger..." >
+          <datalist id="flavor-bank">
+            <option value="Cocoa nib"></option>
+            <option value="Ginger heat"></option>
+            <option value="Citrus zest"></option>
+          </datalist>
+
+          <label for="guest-url">Portfolio URL</label>
+          <input id="guest-url" type="url" name="guest-url" placeholder="https://">
+
+          <label for="guest-size">Party Size</label>
+          <input id="guest-size" type="number" name="guest-size" min="1" max="12" value="2">
+
+          <label for="guest-passcode">Secret Passcode</label>
+          <input id="guest-passcode" type="password" name="guest-passcode" minlength="6" placeholder="6+ characters">
+        </fieldset>
+
+        <fieldset>
+          <legend>Timing Preferences</legend>
+          <label for="guest-date">Preferred Date</label>
+          <input id="guest-date" type="date" name="guest-date">
+
+          <label for="guest-time">Preferred Time</label>
+          <input id="guest-time" type="time" name="guest-time">
+
+          <label for="guest-datetime">Golden Hour Moment</label>
+          <input id="guest-datetime" type="datetime-local" name="guest-datetime">
+
+          <label for="guest-month">Favorite Month</label>
+          <input id="guest-month" type="month" name="guest-month">
+
+          <label for="guest-week">Favorite Week</label>
+          <input id="guest-week" type="week" name="guest-week">
+        </fieldset>
+
+        <fieldset>
+          <legend>Ambience Controls</legend>
+          <label for="guest-color">Lighting Hue</label>
+          <input id="guest-color" type="color" name="guest-color" value="#d68910">
+
+          <label for="guest-range">Energy Level</label>
+          <input id="guest-range" type="range" name="guest-range" min="0" max="100" value="40">
+
+          <label for="guest-file">Playlist Upload</label>
+          <input id="guest-file" type="file" name="guest-file" accept="audio/*">
+
+          <label for="guest-select">Preferred Seating</label>
+          <select id="guest-select" name="guest-select">
+            <option value="bar">Bar rail</option>
+            <option value="booth">Velvet booth</option>
+            <option value="terrace">Terrace</option>
+          </select>
+
+          <span class="field-label">Ambience Vibe</span>
+          <label><input type="radio" name="vibe" value="zen" checked>Zen Cloud</label>
+          <label><input type="radio" name="vibe" value="pulse">Midnight Pulse</label>
+          <label><input type="radio" name="vibe" value="eclectic">Eclectic Groove</label>
+
+          <label><input type="checkbox" name="newsletter" checked>Send me the Oracle newsletter.</label>
+          <label><input type="checkbox" name="vip">Consider me for VIP tastings.</label>
+
+          <label for="guest-notes">Additional Notes</label>
+          <textarea id="guest-notes" name="guest-notes" rows="4" placeholder="Allergies, celebrations, requests"></textarea>
+        </fieldset>
+
+        <input type="hidden" name="form-origin" value="olympus-bar-survey">
+        <div class="survey__actions">
+          <input type="submit" value="Submit Preferences" class="btn btn-amber">
+          <input type="reset" value="Reset Form" class="btn btn-outline">
+        </div>
+        <p class="survey__message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Gallery preview">
+    <button class="lightbox__close" type="button" aria-label="Close gallery">&times;</button>
+    <img src="" alt="">
+    <p class="lightbox__caption"></p>
+  </div>
+
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,80 C320,20 520,140 720,80 C920,20 1120,140 1440,80 L1440,0 L0,0 Z"></path>
+    </svg>
+  </div>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="logo">Olympus Bar</p>
+        <p>Kiriri Heights, Bujumbura, Burundi</p>
+        <p>Author: Guy Fleury Irankunda · Matricule BIU-EED-10-046-2022</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#booking">Book a Table</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#survey">Survey</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer-updated">Restez informé</h4>
+        <p data-i18n="footer-toggle">Basculer le mode sombre ou rejoindre les réseaux sociaux.</p>
+        <button type="button" id="themeToggle" class="btn btn-outline" aria-pressed="false" data-i18n="theme-toggle">Mode sombre</button>
+        <div class="footer__socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">IG</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">FB</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TT</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer__copy">&copy; <span id="year"></span> Olympus Bar. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
